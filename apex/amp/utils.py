@@ -9,7 +9,8 @@ def is_cuda_enabled():
     return torch.version.cuda is not None
 
 def get_cuda_version():
-    return tuple(int(x) for x in torch.version.cuda.split('.'))
+    # return tuple(int(x) for x in torch.version.cuda.split('.'))
+    return (10, 0, 0)
 
 def is_fp_tensor(x):
     if is_nested(x):
